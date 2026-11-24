@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFF6EC" />
+  <meta name="description" content="Hadiah kecil untuk guru TK tersayang di Hari Guru. Sebuah surat, taman bunga, dan pelukan yang bisa diklik." />
+  <title>Selamat Hari Guru, Sayang 💌</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%92%8C%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="gate-open">
+
+  <!-- ============ AMPLOP PEMBUKA ============ -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Amplop pembuka hadiah Hari Guru">
+    <span class="gate-doodle gd-1" aria-hidden="true">💗</span>
+    <span class="gate-doodle gd-2" aria-hidden="true">✨</span>
+    <span class="gate-doodle gd-3" aria-hidden="true">🌸</span>
+    <span class="gate-doodle gd-4" aria-hidden="true">♡</span>
+
+    <div class="gate-inner">
+      <p class="gate-kicker">ssst… ada surat untukmu</p>
+
+      <div class="envelope-wrap">
+        <button class="envelope" id="openLetter" type="button" aria-label="Buka surat untuk guru TK tersayang">
+          <span class="env-back"></span>
+          <span class="env-letter">
+            <span class="env-heart" aria-hidden="true">💗</span>
+            <span class="env-letter-text">Untuk guru TK<br />tersayang</span>
+          </span>
+          <span class="env-front"></span>
+          <span class="env-flap"></span>
+          <span class="env-address">untuk Bu Guru tersayang ♡</span>
+          <span class="env-seal" aria-hidden="true">♥</span>
+        </button>
+      </div>
+
+      <p class="gate-hint"><span class="hint-dot" aria-hidden="true"></span> ketuk amplopnya untuk membuka</p>
+      <p class="gate-from">dari <span data-sender>aku</span>, yang bangga banget sama kamu</p>
+    </div>
+  </div>
+
+  <!-- ============ DEKORASI LATAR ============ -->
+  <div class="floaters" id="floaters" aria-hidden="true"></div>
+
+  <!-- ============ KONTROL MUSIK ============ -->
+  <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="Nyalakan musik latar">
+    <span class="music-ico" aria-hidden="true">🎵</span>
+    <span class="music-txt">Musik</span>
+  </button>
+
+  <main id="main" tabindex="-1">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-el" style="--hd:.05s">✿ Hari Guru Nasional <span class="eyebrow-date">· <span data-tanggal>25 November</span></span></p>
+
+          <h1 class="hero-el" style="--hd:.14s">
+            Selamat Hari Guru,<br />
+            <span class="script-wrap">
+              <span class="script" data-dia>Sayang</span>
+              <svg class="scribble" viewBox="0 0 220 16" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M3 11 Q 55 3 110 9 T 217 7" />
+              </svg>
+            </span>
+            <span class="h1-heart" aria-hidden="true">💗</span>
+          </h1>
+
+          <p class="hero-lead hero-el" style="--hd:.22s">
+            Untuk guru TK paling sabar, paling kreatif, dan paling bersinar yang aku kenal.
+            Terima kasih sudah mengajar dengan hati — dunia kecil di kelasmu jauh lebih berwarna karena kamu.
+          </p>
+
+          <div class="hero-actions hero-el" style="--hd:.3s">
+            <a class="btn btn-primary" href="#surat">
+              Baca surat cinta <span class="btn-emoji" aria-hidden="true">💌</span>
+            </a>
+            <button class="btn btn-ghost" type="button" data-hug="burst">
+              Peluk virtual <span class="btn-emoji" aria-hidden="true">🤗</span>
+            </button>
+          </div>
+
+          <p class="hero-note hero-el" style="--hd:.38s">dibuat dengan sepenuh hati, khusus untukmu ✨</p>
+        </div>
+
+        <div class="hero-art hero-el" style="--hd:.2s">
+          <div class="polaroid">
+            <div class="scene-wrap">
+              <img class="scene scene-photo" src="assets/foto-bu-guru.jpg" alt="Bu Guru tersenyum manis" width="900" height="1600" />
+            </div>
+            <p class="polaroid-caption">guru TK terbaik di dunia <span aria-hidden="true">♡</span></p>
+          </div>
+
+          <div class="art-sticker" aria-hidden="true">
+            <span class="sticker-flower">✿</span>
+            <span>Hari Guru</span>
+            <span>spesial</span>
+          </div>
+
+          <div class="art-note" aria-hidden="true">kamu hebat,<br />Bu Guru!</div>
+
+          <svg class="art-spark" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 3 v10 M20 27 v10 M3 20 h10 M27 20 h10 M9 9 l 5 5 M26 26 l 5 5 M31 9 l -5 5 M14 26 l -5 5" />
+          </svg>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#alasan">
+        <span class="mouse" aria-hidden="true"></span>
+        scroll pelan-pelan yah♡
+      </a>
+    </section>
+
+    <!-- ============ PITA BERJALAN ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span class="mq-item">selamat hari guru</span>
+          <span class="mq-item">bu guru terbaik</span>
+          <span class="mq-item">sabar tanpa batas</span>
+          <span class="mq-item">penuh cinta</span>
+          <span class="mq-item">pahlawan tanpa tanda jasa</span>
+          <span class="mq-item">cantik &amp; kreatif</span>
+          <span class="mq-item">murid-muridmu beruntung</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span class="mq-item">selamat hari guru</span>
+          <span class="mq-item">bu guru terbaik</span>
+          <span class="mq-item">sabar tanpa batas</span>
+          <span class="mq-item">penuh cinta</span>
+          <span class="mq-item">pahlawan tanpa tanda jasa</span>
+          <span class="mq-item">cantik &amp; kreatif</span>
+          <span class="mq-item">murid-muridmu beruntung</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ALASAN ============ -->
+    <section class="section reasons" id="alasan">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">bukan cuma karena hari ini</p>
+          <h2 class="h2">Kamu luar biasa, setiap hari.</h2>
+          <p class="section-sub">Ada banyak hal yang bikin aku kagum sama kamu. Ini beberapa di antaranya — dan sebenarnya masih banyak lagi.</p>
+        </header>
+
+        <div class="reason-grid">
+          <article class="reason-card reveal" style="--delay:.02s">
+            <span class="reason-num">01</span>
+            <span class="reason-icon" aria-hidden="true">🧸</span>
+            <h3>Sabar yang hangat</h3>
+            <p>Menghadapi banyak anak termasuk sembilan anak kamu dikelas emerald butuh energi luar biasa. Tapi kamu selalu punya pelukan dan kata-kata lembut yang bikin mereka merasa aman.</p>
+          </article>
+
+          <article class="reason-card reveal" style="--delay:.08s">
+            <span class="reason-num">02</span>
+            <span class="reason-icon" aria-hidden="true">🎨</span>
+            <h3>Kreatif tanpa batas</h3>
+            <p>Dari kertas lipat, lagu, dan banyak yg lainnya. Kamu tahu cara membuat hal sederhana jadi petualangan yang seru.</p>
+          </article>
+
+          <article class="reason-card reveal" style="--delay:.14s">
+            <span class="reason-num">03</span>
+            <span class="reason-icon" aria-hidden="true">🌷</span>
+            <h3>Hati yang tulus</h3>
+            <p>Kamu menyayangi murid-muridmu dengan tulus. Dan anak-anak kecil itu selalu tahu, terlihat dari mata mereka yang berbinar saat memanggil namamu.</p>
+          </article>
+
+          <article class="reason-card reveal" style="--delay:.2s">
+            <span class="reason-num">04</span>
+            <span class="reason-icon" aria-hidden="true">✨</span>
+            <h3>Cahaya di kelas</h3>
+            <p>Kamu bukan hanya mengajarkan huruf dan angka. Kamu mengajarkan keberanian, kebaikan, dan cara menjadi manusia yang baik.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SURAT ============ -->
+    <section class="section letter-section" id="surat">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">dari aku, untukmu</p>
+          <h2 class="h2">Surat kecil di Hari Guru.</h2>
+          <p class="section-sub">Kalau bisa, aku mau bilang semua ini sambil menyerahkan bunga. Tapi untuk sekarang, biar surat ini yang mewakili.</p>
+        </header>
+
+        <div class="letter-shell">
+          <article class="letter-paper">
+            <span class="tape tape-a" aria-hidden="true"></span>
+            <span class="tape tape-b" aria-hidden="true"></span>
+
+            <svg class="sprig" viewBox="0 0 140 150" aria-hidden="true">
+              <path d="M34 140 C 50 108 70 86 98 66" stroke="#A7C6A9" stroke-width="3" fill="none" stroke-linecap="round" />
+              <g fill="#F4C4CD">
+                <circle cx="98" cy="52" r="11" />
+                <circle cx="112" cy="61" r="9.5" />
+                <circle cx="109" cy="77" r="9.5" />
+                <circle cx="92" cy="80" r="9.5" />
+                <circle cx="83" cy="64" r="9.5" />
+              </g>
+              <circle cx="98" cy="67" r="7" fill="#F6D488" />
+              <g fill="#B7D4B8">
+                <ellipse cx="63" cy="102" rx="14" ry="7" transform="rotate(-35 63 102)" />
+                <ellipse cx="78" cy="120" rx="13" ry="6.5" transform="rotate(25 78 120)" />
+                <ellipse cx="52" cy="126" rx="12" ry="6" transform="rotate(-30 52 126)" />
+              </g>
+            </svg>
+
+            <p class="letter-greeting reveal">Untuk guru TK kesayanganku,</p>
+
+            <p class="reveal" style="--delay:.05s">
+              Selamat Hari Guru, <span data-dia>Sayang</span>. Hari ini dunia sedang merayakan orang-orang sepertimu — orang yang dengan sabar menanam kebaikan di hati anak-anak kecil.
+            </p>
+
+            <p class="reveal" style="--delay:.09s">
+              Aku tahu jadi guru TK itu nggak selalu mudah. Ada hari yang ramai, melelahkan, dan penuh suara kecil yang memanggil namamu bersamaan. Tapi kamu selalu datang dengan senyum, pelukan, dan kesabaran yang rasanya nggak pernah habis.
+            </p>
+
+            <p class="reveal" style="--delay:.13s">
+              Terima kasih sudah mengajar dengan hati. Terima kasih sudah jadi tempat aman untuk murid-muridmu, dan jadi tempat pulang paling hangat untukku.
+            </p>
+
+            <p class="reveal" style="--delay:.17s">
+              Melihatmu mencintai pekerjaanmu adalah salah satu hal favoritku. Kamu membuat dunia kecil di kelasmu jauh lebih berwarna, dan kamu membuat duniaku jauh lebih baik hanya dengan kehadiranmu.
+            </p>
+
+            <div class="letter-sign reveal" style="--delay:.2s">
+              <p class="sign-label">Dengan cinta,</p>
+              <p class="sign-name"><span data-sender>aku</span> <span class="sign-heart" aria-hidden="true">♡</span></p>
+              <p class="sign-sub">yang selalu bangga sama kamu</p>
+            </div>
+
+            <button class="letter-ps letter-ps-btn reveal" style="--delay:.24s" type="button" data-hug="burst">
+              Jangan lupa istirahat ya, Bu Guru. Pelukannya sudah aku titipkan di halaman ini — tinggal diklik.
+              <span class="ps-heart" aria-hidden="true">💗</span>
+              <span class="ps-hint" aria-hidden="true">klik di sini</span>
+            </button>
+
+            <span class="wax-seal" aria-hidden="true">♥</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KATA MURID ============ -->
+    <section class="section kids" id="kata-mereka">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">kata murid-murid kecilmu</p>
+          <h2 class="h2">Suara kecil yang paling jujur.</h2>
+          <p class="section-sub">Kalau mereka sudah bilang begitu, berarti kamu memang sehebat itu. 💛</p>
+        </header>
+
+        <div class="quote-grid">
+          <article class="quote-card reveal" style="--delay:.02s">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <blockquote>Bu Kia, cantik banget hari ini… kayak bunga!</blockquote>
+            <p class="quote-note">murid TK, sambil menyodorkan gambar crayon</p>
+            <span class="quote-heart" aria-hidden="true">♡</span>
+          </article>
+
+          <article class="quote-card reveal" style="--delay:.09s">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <blockquote>Bu Kia, aku boleh peluk nggak? Cuma sebentar…</blockquote>
+            <p class="quote-note">setiap hari, lima menit sebelum pulang</p>
+            <span class="quote-heart" aria-hidden="true">♡</span>
+          </article>
+
+          <article class="quote-card reveal" style="--delay:.16s">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <blockquote>Bu Guru, besok sekolah lagi ya? Aku nggak mau libur.</blockquote>
+            <p class="quote-note">sebuah kalimat yang bikin hati meleleh</p>
+            <span class="quote-heart" aria-hidden="true">♡</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TAMAN INTERAKTIF ============ -->
+    <section class="section garden-section" id="taman">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">sebuah taman kecil untukmu</p>
+          <h2 class="h2">Ketuk, dan biarkan bunga tumbuh.</h2>
+          <p class="section-sub">Setiap ketukan akan menumbuhkan satu bunga — seperti hal-hal baik yang kamu tanam di hati murid-muridmu, yang tumbuh tanpa kamu sadari.</p>
+        </header>
+
+        <div class="garden-card reveal">
+          <div class="garden" id="garden" tabindex="0" role="region" aria-label="Taman interaktif. Ketuk di mana saja, atau tekan Enter, untuk menanam bunga.">
+            <span class="garden-sun" aria-hidden="true"></span>
+            <span class="garden-cloud gcloud-1" aria-hidden="true"></span>
+            <span class="garden-cloud gcloud-2" aria-hidden="true"></span>
+            <span class="garden-hill hill-1" aria-hidden="true"></span>
+            <span class="garden-hill hill-2" aria-hidden="true"></span>
+            <span class="garden-butterfly bfly-1" aria-hidden="true">🦋</span>
+            <span class="garden-butterfly bfly-2" aria-hidden="true">🦋</span>
+            <span class="garden-hint" aria-hidden="true">ketuk di mana saja ✨</span>
+          </div>
+
+          <div class="garden-foot">
+            <p class="garden-count">🌷 <span id="flowerCount">0</span>&nbsp;bunga sudah tumbuh</p>
+            <button class="btn btn-small" id="resetGarden" type="button">Tumbuhkan ulang ↺</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PENUTUP ============ -->
+    <section class="section closing">
+      <div class="container">
+        <div class="closing-panel reveal">
+          <span class="cp-heart cp-1" aria-hidden="true">♥</span>
+          <span class="cp-heart cp-2" aria-hidden="true">♥</span>
+          <span class="cp-heart cp-3" aria-hidden="true">♥</span>
+          <span class="cp-spark s-1" aria-hidden="true">✦</span>
+          <span class="cp-spark s-2" aria-hidden="true">✦</span>
+
+          <p class="closing-kicker">dan satu hal lagi…</p>
+          <h2>Terima kasih sudah menjadi guru, dan menjadi rumah.</h2>
+          <p class="closing-text">
+            Di antara semua bunga, gambar crayon, dan pelukan kecil hari ini, aku juga ingin kamu tahu satu hal:
+            kamu sangat berarti. Bagi murid-muridmu, bagi anak-anak kecil yang belajar percaya karena kamu —
+            dan tentu saja, bagi aku.
+          </p>
+
+          <button class="hug-btn" id="hugBtn" type="button" data-hug="rain">
+            <span aria-hidden="true">🤗</span> Kirim Pelukan
+          </button>
+
+          <p class="hug-note">
+            sudah kamu kirim: <strong id="hugCount">0</strong> pelukan · boleh di-spam, pelukannya nggak akan habis 🤍
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-script">dibuat dengan sepenuh hati, khusus untuk guru TK tercinta</p>
+      <p class="footer-meta">Hari Guru Nasional · <span data-tanggal>25 November</span> · <span data-dia>Sayang</span> 💗</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="heart-rain" id="heartRain" aria-hidden="true"></div>
+
+  <noscript>
+    <style>
+      .gate, .music-toggle, .floaters { display: none !important; }
+      body { overflow: auto !important; }
+      .hero-el, .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+      .scribble path { stroke-dashoffset: 0 !important; }
+    </style>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
